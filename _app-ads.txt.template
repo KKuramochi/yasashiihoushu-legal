@@ -1,14 +1,19 @@
-# app-ads.txt テンプレート（まだ本番デプロイしていない）
+# app-ads.txt はここではなく別リポジトリで本番運用中（2026-09-05〜）
 #
-# AdMob の本番アプリ ID / ユニット ID を取得したら、下の行の pub-XXXXXXXXXXXXXXXX を
-# 自分のパブリッシャー ID（AdMob 管理画面 右上「発行元 ID」。ca-app-pub- に続く 16 桁）に
-# 置き換え、このファイルを `app-ads.txt` にリネームしてリポジトリのルートに置く。
-# GitHub Pages で https://kkuramochi.github.io/app-ads.txt ではなくカスタムドメイン直下
-# （例 https://<your-domain>/app-ads.txt）に配信される必要がある点に注意。
-# GitHub Pages のプロジェクトページ（/yasashiihoushu-legal/ サブパス）は app-ads.txt の
-# 配置先として不可 → カスタムドメイン、または別のユーザー/組織 Pages、または
-# Cloudflare Pages 等でドメイン直下に置くこと。
+# このリポジトリ（yasashiihoushu-legal）は GitHub Pages の「プロジェクトページ」
+# （https://kkuramochi.github.io/yasashiihoushu-legal/ というサブパス配信）なので、
+# ルート直下が必須の app-ads.txt はここには置けない。
 #
-# その上で、Google Play ストア掲載情報の「ウェブサイト」欄をそのドメインにする。
+# github.io は Public Suffix List 登録済みのため、kkuramochi.github.io 自体が
+# 独立したルートドメインとして扱われる（カスタムドメインは不要）。そこで
+# GitHub Pages の「ユーザーサイト」用リポジトリ `KKuramochi/KKuramochi.github.io`
+# を新設し、そのルート直下に app-ads.txt を配置・公開済み:
 #
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#   https://kkuramochi.github.io/app-ads.txt
+#
+# 中身: google.com, pub-3076657252775829, DIRECT, f08c47fec0942fa0
+# （pub-3076657252775829 は invoice_master の AdMobアプリID
+#  ca-app-pub-3076657252775829~4423208112 から。詳細は invoice_master の docs/admob.md）
+#
+# 今後アプリを増やす場合も、同じ `KKuramochi.github.io` リポジトリの app-ads.txt に
+# 行を追記すればよい（発行元IDが同じなら1行で全アプリ分をカバーできる）。
