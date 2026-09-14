@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>データ削除のリクエスト｜誰でもできる報酬計算と請求書作成</title>
+<meta name="description" content="Androidアプリ「誰でもできる報酬計算と請求書作成」で取り扱うデータの削除方法と、削除リクエストの手順を説明します。">
+<link rel="canonical" href="https://kkuramochi.github.io/yasashiihoushu-legal/data-deletion.html">
+<style>
+  :root { color-scheme: light dark; --bg:#ffffff; --ink:#1a1a22; --muted:#5b5b68; --accent:#2E7D32; --border:#e6e6ec; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12121a; --ink:#e9e9f0; --muted:#a6a6b3; --accent:#7bd88f; --border:#2a2a36; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+    line-height:1.8; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.6rem; line-height:1.4; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 40px 0 8px; padding-top: 8px; border-top: 1px solid var(--border); }
+  h3 { font-size: 1rem; margin: 20px 0 4px; }
+  a { color: var(--accent); }
+  ul, ol { padding-left: 1.3em; }
+  li { margin: 4px 0; }
+  .meta { color: var(--muted); font-size: 0.9rem; }
+  code { background: rgba(128,128,128,.15); padding: 0 4px; border-radius: 4px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 0.95rem; }
+  th, td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+  .box { border:1px solid var(--border); border-radius:8px; padding:12px 16px; margin:16px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>データ削除のリクエスト</h1>
+  <p class="meta">対象アプリ：<strong>誰でもできる報酬計算と請求書作成</strong>（Android／パッケージ名 <code>jp.kkuramochi.yasashiihoushu</code>）<br>
+  提供者：個人開発者　倉持 一輝<br>
+  最終更新日：2026年9月14日</p>
+
+  <h2>1. このアプリにアカウントはありません</h2>
+  <p>本アプリはアカウント登録・ログインを必要としません。したがって「アカウントの削除」という手続きはありません。
+  削除の対象になるのは、下記2および3のデータです。</p>
+
+  <h2>2. 端末内のデータ（ご自身で削除できます）</h2>
+  <p>発行者情報、請求先、作成した請求書の内容と履歴、保存されたPDF、ロゴ画像、各種設定は、
+  <strong>すべてお使いの端末内にのみ保存</strong>されており、開発者のサーバーには送信されません。
+  次のいずれかの方法で、リクエストなしにご自身で削除できます。</p>
+  <ul>
+    <li>アプリ内の削除機能（請求先の削除、請求書履歴の削除、屋号の削除）で個別に削除する</li>
+    <li>アプリをアンインストールする（端末内のデータはすべて消去されます）</li>
+    <li>Android の「設定」→「アプリ」→「誰でもできる報酬計算と請求書作成」→「ストレージ」→「データを削除」</li>
+  </ul>
+  <div class="box">
+    <p style="margin:0"><strong>ご注意：</strong>バックアップ機能で書き出したJSONファイルや、共有機能で送信したPDF・CSVは、
+    お客様が選んだ保存先・送信先にあります。これらの削除はお客様ご自身で行ってください。</p>
+  </div>
+
+  <h2>3. 外部サービスに送信されたデータ（削除をリクエストできます）</h2>
+  <table>
+    <tr><th>データ</th><th>保持している事業者</th><th>削除の方法</th></tr>
+    <tr>
+      <td>Pro版の購入検証に使う匿名の利用者ID、Google Play の購入トークン・注文情報</td>
+      <td>RevenueCat, Inc.</td>
+      <td>下記4のメールでリクエストしてください</td>
+    </tr>
+    <tr>
+      <td>広告識別子（Advertising ID）、端末情報、IPアドレス等</td>
+      <td>Google LLC（AdMob）</td>
+      <td>端末の「設定」→「Google」→「広告」から広告IDを削除・リセットできます</td>
+    </tr>
+    <tr>
+      <td>匿名の利用イベント、端末・OS情報、おおよその地域</td>
+      <td>Google LLC（Firebase Analytics）</td>
+      <td>同上（広告IDの削除）。個別の削除は下記4でリクエストできます</td>
+    </tr>
+    <tr>
+      <td>郵便番号（住所検索を実行したときのみ）</td>
+      <td>株式会社アイビーネット（zipcloud）</td>
+      <td>検索のためにその場で使われるのみで、開発者は保持していません</td>
+    </tr>
+  </table>
+
+  <h2>4. 削除リクエストの手順</h2>
+  <p>下記のメールアドレス宛に、件名を「データ削除リクエスト」としてご連絡ください。</p>
+  <p style="font-size:1.05rem"><strong><a href="mailto:kazuki.kura1219@gmail.com?subject=%E3%83%87%E3%83%BC%E3%82%BF%E5%89%8A%E9%99%A4%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">kazuki.kura1219@gmail.com</a></strong></p>
+  <p>本人確認と対象特定のため、分かる範囲で次の情報をお知らせください。</p>
+  <ul>
+    <li>Pro版を購入された場合：Google Play の注文番号（<code>GPA.</code> で始まる番号。Google Play の購入履歴で確認できます）</li>
+    <li>ご利用の端末名・Android のバージョン（任意）</li>
+  </ul>
+  <p><strong>受付から30日以内</strong>に削除を行い、完了をメールでご連絡します。</p>
+
+  <h2>5. 削除できないもの</h2>
+  <ul>
+    <li><strong>Google Play の購入・返金の記録</strong>：Google が法令・会計上の義務にもとづき保持するもので、開発者側では削除できません。
+    Google に対する請求は <a href="https://support.google.com/googleplay" target="_blank" rel="noopener">Google Play ヘルプ</a> をご利用ください。</li>
+    <li><strong>すでに統計として集計され、個人と結び付けられなくなった情報</strong>：特定の方のデータとして抽出・削除することができません。</li>
+  </ul>
+  <div class="box">
+    <p style="margin:0"><strong>Pro版の購入記録を削除した場合の影響：</strong>
+    購入の検証に使うデータを削除すると、「購入を復元」でPro版を復元できなくなる場合があります。
+    削除をご希望の場合は、この点をご了承のうえお申し出ください。</p>
+  </div>
+
+  <h2>6. 関連ページ</h2>
+  <ul>
+    <li><a href="/yasashiihoushu-legal/privacy-policy.html">プライバシーポリシー</a></li>
+  </ul>
+</main>
+</body>
+</html>
